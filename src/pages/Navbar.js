@@ -5,6 +5,9 @@ import Login from '../Login';
 import Dashboard from '../Dashboard';
 import About from '../About';
 
+import PrivateRoute from '../Utils/PrivateRoute';
+import PublicRoute from '../Utils/PublicRoute';
+
 class Navbar extends Component {
   render() {
     return (
@@ -21,8 +24,8 @@ class Navbar extends Component {
           <div className="content">
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/login" component={Login} />
-              <Route path="/dashboard" component={Dashboard} />
+              <PublicRoute path="/login" component={Login} />
+              <PrivateRoute path="/dashboard" component={Dashboard} />
               <Route path="/about" component={About} />
             </Switch>
           </div>
