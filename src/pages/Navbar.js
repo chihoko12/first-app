@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, Link, NavLink } from 'react-router-dom';
+import Home from '../Home';
 import Login from '../Login';
 import Dashboard from '../Dashboard';
-import Home from '../Home';
 
 class Navbar extends Component {
   render() {
@@ -21,7 +21,7 @@ class Navbar extends Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/login" component={Login} />
-              <Route path="/contact" component={Dashboard} />
+              <Route path="/dashboard" component={Dashboard} />
             </Switch>
           </div>
         </div>
