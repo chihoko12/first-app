@@ -12,12 +12,6 @@ class App extends React.Component {
     }
   }
 
-  inputChange(p1, p2, e) {
-    console.log('Params1: ', p1);
-    console.log('Parmas2: ', p2);
-    this.setState({ input: e.target.value });
-  }
-
   render() {
     return (
       <div className="App">
@@ -44,14 +38,6 @@ class App extends React.Component {
                 <Route path="/contact" component={Dashboard} />
               </Switch>
             </div>
-
-            <div className="container">
-              <p>Biding method with parameters</p>
-              <input onChange={(e) => this.inputChange('Parameter 1', 'Parameter 2', e)}></input><br />
-              <p>Input value: {this.state.input}</p>
-            </div>
-
-
           </div>
 
         </BrowserRouter>
