@@ -1,49 +1,26 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route, Link, NavLink } from 'react-router-dom';
+import React from 'react';
+import './App.css';
 import Login from './Login';
 import Dashboard from './Dashboard';
 import Home from './Home';
+import Header from './pages/Header';
+import Navbar from './pages/Navbar';
+import Content from './pages/Content';
+import Sidebar from './pages/Sidebar';
+import Footer from './pages/Footer';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      input: ''
-    }
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <BrowserRouter>
-          <div>
-            <div className="header">
-              <ul>
-                <li>
-                  <NavLink exact activeClassName="active" to="/">Home</NavLink>
-                </li>
-                <li>
-                  <NavLink activeClassName="active" to="/login">Login</NavLink><small>(Access without token only)</small>
-                </li>
-                <li>
-                  <NavLink activeClassName="active" to="/dashboard">Dashboard</NavLink><small>(Access with token only)</small>
-                </li>
-              </ul>
-          </div>
-
-            <div className="content">
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/login" component={Login} />
-                <Route path="/contact" component={Dashboard} />
-              </Switch>
-            </div>
-          </div>
-
-        </BrowserRouter>
+function App() {
+  return (
+    <div>
+      <Header />
+      <Navbar />
+      <div className="row">
+        <Content />
+        <Sidebar />
       </div>
-    );
-  }
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
