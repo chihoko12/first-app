@@ -47,7 +47,7 @@ class App extends React.Component {
 
             <div className="container">
               <p>Biding method with parameters</p>
-              <input onChange={this.inputChange.bind(this, 'Parameter 1', 'Parameter 2')}></input><br />
+              <input onChange={(e) => this.inputChange('Parameter 1', 'Parameter 2', e)}></input><br />
               <p>Input value: {this.state.input}</p>
             </div>
 
