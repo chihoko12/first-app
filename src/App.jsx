@@ -12,7 +12,9 @@ class App extends React.Component {
     }
   }
 
-  inputChange(e) {
+  inputChange(p1, p2, e) {
+    console.log('Params1: ', p1);
+    console.log('Parmas2: ', p2);
     this.setState({ input: e.target.value });
   }
 
@@ -44,8 +46,8 @@ class App extends React.Component {
             </div>
 
             <div className="container">
-              <p>Biding method with arrow function</p>
-              <input onChange={(e) => this.inputChange(e)}></input><br />
+              <p>Biding method with parameters</p>
+              <input onChange={this.inputChange.bind(this, 'Parameter 1', 'Parameter 2')}></input><br />
               <p>Input value: {this.state.input}</p>
             </div>
 
