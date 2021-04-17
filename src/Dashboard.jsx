@@ -1,37 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { getUser, removeUserSession } from './Utils/Common';
 
-class Dashboard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      input: ''
-    }
-  }
-
-  inputChange(p1, p2, e) {
-    console.log('Param1: ', p1);
-    console.log('Param2: ', p2);
-    this.setState({ input: e.target.value });
-  }
+function Dashboard(props) {
+  const user = getUser();
 
   // handle click event of logout button
-  handleLogout(props) {
+  const handleLogout = () => {
+    removeUserSession();
     props.history.push('/login');
   };
 
-
-    render() {
-      return (
-        <div>
-          <div className="container">
-            <h1>Welcome User!</h1>
-            <p>Biding method with parameters</p>
-            <input onChange={(e) => this.inputChange('Parameter 1', 'Parameter 2', e)}></input><br />
-            <p>Input value: {this.state.input}</p>
-          </div>
-        </div>
-      );
-    }
+  return (
+    <div className="container">
+      <h1>Welcome {user.name}!<br /><br /></h1>
+      <input type="button"onClick={handleLogout} value="Logout" />
+    </div>
+  );
 }
 
 export default Dashboard;

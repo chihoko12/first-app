@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 import Home from '../Home';
 import Login from '../Login';
 import Dashboard from '../Dashboard';
+import About from '../About';
 
 class Navbar extends Component {
   render() {
@@ -13,7 +14,7 @@ class Navbar extends Component {
             <NavLink exact activeClassName="active" to="/">Home</NavLink>
             <NavLink activeClassName="active" to="/login">Login</NavLink>
             <NavLink activeClassName="active" to="/dashboard">Dashboard</NavLink>
-            <NavLink activeClassName="active" to="#">About</NavLink>
+            <NavLink activeClassName="active" to="/about">About</NavLink>
             <NavLink activeClassName="active" className="right" to="#">Contact</NavLink>
           </div>
 
@@ -22,6 +23,7 @@ class Navbar extends Component {
               <Route exact path="/" component={Home} />
               <Route path="/login" component={Login} />
               <Route path="/dashboard" component={Dashboard} />
+              <Route path="/about" component={About} />
             </Switch>
           </div>
         </div>
