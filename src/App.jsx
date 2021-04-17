@@ -10,6 +10,7 @@ class App extends React.Component {
     this.state = {
       input: ''
     }
+    this.inputChange = this.inputChange.bind(this);
   }
 
   inputChange(e) {
@@ -44,8 +45,8 @@ class App extends React.Component {
             </div>
 
             <div className="container">
-              <p>Biding method</p>
-              <input onChange={this.inputChange.bind(this)}></input><br />
+              <p>Biding method in constructor</p>
+              <input onChange={this.inputChange}></input><br />
               <p>Input value: {this.state.input}</p>
             </div>
 
