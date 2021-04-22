@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React  from 'react';
 import axios from 'axios';
 import { getUser, removeUserSession } from './Utils/Common';
-
+import Button from '@material-ui/core/Button';
 
 function Dashboard(props) {
   const user = getUser();
@@ -15,8 +15,9 @@ function Dashboard(props) {
   return (
     <div className="container">
       <h1>Welcome {user.name}!<br /><br /></h1>
-      <input type="button"onClick={handleLogout} value="Logout" />
-
+      <Button variant="contained" color="primary" type="button" onClick={ handleLogout} value="Logout">
+        Logout
+      </Button>
     </div>
   );
 }
