@@ -4,6 +4,7 @@ import Home from '../Home';
 import Login from '../Login';
 import Dashboard from '../Dashboard';
 import About from '../About';
+import Contact from '../Contact';
 
 import PrivateRoute from '../Utils/PrivateRoute';
 import PublicRoute from '../Utils/PublicRoute';
@@ -18,7 +19,7 @@ class Navbar extends Component {
             <NavLink activeClassName="active" to="/login">Login</NavLink>
             <NavLink activeClassName="active" to="/dashboard">Dashboard</NavLink>
             <NavLink activeClassName="active" to="/about">About</NavLink>
-            <NavLink activeClassName="active" className="right" to="#">Contact</NavLink>
+            <NavLink activeClassName="active" className="right" to="/contact">Contact</NavLink>
           </div>
 
           <div className="content">
@@ -27,6 +28,7 @@ class Navbar extends Component {
               <PublicRoute path="/login" component={Login} />
               <PrivateRoute path="/dashboard" component={Dashboard} />
               <Route path="/about" component={About} />
+              <Route path="/contact" component={Contact} />
             </Switch>
           </div>
         </div>

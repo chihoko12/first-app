@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { getUser, removeUserSession } from './Utils/Common';
+
 
 function Dashboard(props) {
   const user = getUser();
@@ -14,6 +16,7 @@ function Dashboard(props) {
     <div className="container">
       <h1>Welcome {user.name}!<br /><br /></h1>
       <input type="button"onClick={handleLogout} value="Logout" />
+
     </div>
   );
 }
