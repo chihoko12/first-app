@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-class Content extends Component {
-  render() {
+function Content() {
     return (
       <div className="main">
         <h2>Lorem ipsum</h2>
@@ -17,7 +16,6 @@ class Content extends Component {
         <p>slkjfdlkj slkjslkj slkjfdlkj</p>
       </div>
     );
-  }
 }
 
 export default Content;
