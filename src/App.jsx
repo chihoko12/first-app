@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import './App.css';
+import './style/App.css';
 import Header from './pages/Header';
 import Navbar from './pages/Navbar';
 import Footer from './pages/Footer';

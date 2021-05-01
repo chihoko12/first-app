@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Content from './pages/Content';
-import Sidebar from './pages/Sidebar';
+import Content from '../pages/Content';
+import Sidebar from '../pages/Sidebar';
 
 function Contact() {
   return(
