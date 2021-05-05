@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# About this App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Login Form with JWT authentification
+
+
 
 ## Available Scripts
 
